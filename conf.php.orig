@@ -1,0 +1,31 @@
+<?php
+
+  //include("checa.php");
+  
+  // diretorios que precisam ser acessados do web server
+  
+  $BASEURL    = 'http://sampa.if.usp.br/webroot'; 
+  $TMPDIR     = '/sampa/home/www/html/webroot/tmp';
+  $TMPURL     = $BASEURL.'/tmp';
+  
+  // diretorios sem acesso pelo web server
+  
+  $ROOTDIR    = '/sampa/home/webapp/root';
+  $HOMEDIR    = '/sampa/home/webapp/webroot/home';
+  $PASSWD     = '/sampa/home/webapp/webroot/passwd.txt';
+  $ID         = '/sampa/home/webapp/id_rsa';
+  
+  $ADMIN      = 'sampa-admin@dfn.if.usp.br';
+
+  
+  // outras configuracoes
+  $MAXTIME    = 1800;
+  $ROOTSTYLE  = 'Modern';
+  
+  $SQLSERVER  = "sampadb";
+  $SQLDB      = "webroot";
+  $SQLUSER    = "webroot";
+  $SQLPASS    = "webrootsenha";  
+  
+  
+?>
