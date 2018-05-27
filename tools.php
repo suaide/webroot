@@ -820,7 +820,7 @@ function atualiza_shares($db,$HOMEDIR, $dir, $file, $data)
   for($i = 0; $i<$c; $i++)
   {
     
-    $q = "SELECT * FROM passwd WHERE email='".trim($lines[$i])."';";
+    $q = "SELECT * FROM passwd WHERE email='".mysql_real_escape_string(trim($lines[$i]))."';";
     $Q = mysql_query($q);
     $n = mysql_num_rows($Q);
     if($n>0 && trim($lines[$i])!=$_SESSION["email"])

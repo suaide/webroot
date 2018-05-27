@@ -18,7 +18,7 @@
 
   function checa_admin()
   {
-    if (!checa_login()) return false;        
+    if (!checa_login()) return false;
     if ($_SESSION["tipo"]!="A") return false;
     
     return true;

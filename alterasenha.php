@@ -32,7 +32,7 @@
   if(!$dbf) {header("Location: index.php?action=senha&err=db"); exit;} 
   
   
-  $q = "SELECT * FROM passwd WHERE login='".$_SESSION["login"]."' AND senha='$senha1';";
+  $q = "SELECT * FROM passwd WHERE login='".mysql_real_escape_string($_SESSION["login"])."' AND senha='$senha1';";
   $Q = mysql_query($q,$db);
   $n = mysql_num_rows($Q);      
   
@@ -42,7 +42,7 @@
     exit;
   }
   
-  $q = "UPDATE passwd SET senha = '".$senha2."' WHERE login = '".$_SESSION["login"]."' AND senha = '$senha1';";    
+  $q = "UPDATE passwd SET senha = '".$senha2."' WHERE login = '".mysql_real_escape_string($_SESSION["login"])."' AND senha = '$senha1';";
   mysql_query($q);
  
   header("Location: index.php?action=senha&err=ok");

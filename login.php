@@ -9,7 +9,7 @@
     exit;
   }
 
-  $login = strtolower($_POST["login"]);
+  $login = mysql_real_escape_string(strtolower($_POST["login"]));
   $senha = md5($_POST["senha"]);
   
   $db = mysql_connect($SQLSERVER, $SQLUSER, $SQLPASS);
